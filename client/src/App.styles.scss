@@ -1,0 +1,153 @@
+html {
+  color: #37474f;
+}
+
+.body-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+main {
+  flex: 1 0 auto;
+}
+
+.login-form {
+  max-width: 400px;
+}
+
+.register-wrapper {
+  margin-top: 60px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.music-icon {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+.page-heading {
+  box-shadow: 5px 5px 5px 5px grey;
+  margin-top: 80px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  img {
+    height: 120px;
+    width: 120px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
+.post-track-form {
+  padding-top: 60px;
+}
+
+.show-list-wrapper {
+  padding-top: 60px;
+}
+
+.show-list-wrapper .comment-list {
+  padding-top: 60px;
+  position: relative;
+  left: 10px;
+}
+
+.show-list-wrapper .comment-list li button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.show-list-wrapper .comment-submit-btn {
+  font-size: 0.8rem;
+  padding-left: 14px;
+  padding-right: 14px;
+  top: -10px;
+  left: 10px;
+}
+
+.show-list-wrapper .manage-options {
+  margin-left: 20px;
+}
+
+.show-list-wrapper .submit-comment-form {
+  padding-top: 60px;
+}
+
+.flash {
+  margin-top: 20px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+.success-flash {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.success-deleted-flash,
+.success-username-flash {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.error-flash {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.page-not-found-wrapper {
+  margin-top: 60px;
+}
+
+.page-not-found-wrapper .button-wrapper {
+  margin-top: 40px;
+}
+
+.page-not-found-wrapper h1 {
+  max-width: 600px;
+  font-weight: 800;
+}
+
+.page-not-found-wrapper h5 {
+  margin-top: 40px;
+  font-weight: 500;
+  max-width: 305px;
+}
+
+.page-not-found-wrapper .see-all-tracks-btn {
+  margin-left: 20px;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in 5ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+/*# sourceMappingURL=styles.css.map */

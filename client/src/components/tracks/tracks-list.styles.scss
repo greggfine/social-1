@@ -1,0 +1,79 @@
+.tracklist {
+  .page-heading {
+    padding: 0;
+  }
+  .tracklist-heading-text {
+    font-family: "Futura", sans-serif;
+    font-style: italic;
+    position: relative;
+    bottom: 10px;
+    color: #37474f;
+  }
+
+  .tracklist-item {
+    margin-top: 90px;
+    padding-bottom: 25px;
+  }
+
+  .tracks-upload-icon {
+    margin-right: 60px;
+  }
+
+  .blockquote {
+    font-size: 1.2rem;
+    border-left: 6px solid #ff5722;
+  }
+
+  .tracklist-item-mood-icon {
+    font-size: 3rem;
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 1px;
+  }
+
+  .tracklist-item-upload-date {
+    position: relative;
+    opacity: 0.6;
+    text-align: right;
+  }
+
+  .tracklist-item-audio-and-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .tracklist-item-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 40px;
+    width: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tracklist {
+    .tracklist-item-links {
+      flex-direction: column;
+      margin-left: 5%;
+      padding-top: 10px;
+      width: 80px;
+    }
+
+    .tracklist-heading-text {
+      font-size: 2.5rem;
+    }
+
+    .tracks-upload-icon {
+      margin-right: 20px;
+      font-size: 5rem;
+    }
+  }
+}

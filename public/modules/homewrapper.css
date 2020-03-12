@@ -1,0 +1,45 @@
+.home-wrapper {
+  margin-top: 60px;
+}
+
+.home-wrapper a {
+  position: relative;
+  left: -25px;
+  top: 15px;
+}
+
+.home-wrapper .bottom-wrapper {
+  padding-top: 40px;
+}
+
+.home-wrapper .current-number-of-tracks {
+  padding-top: 20px;
+  float: right;
+}
+
+.home-wrapper .you-currently-have {
+  padding-top: 20px;
+  float: right;
+}
+
+.home-wrapper .post-track-comment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-wrapper .post-track-comment-wrapper i {
+  font-size: 3rem;
+}
+
+.home-wrapper .post-track-comment-wrapper span {
+  padding-left: 10px;
+}
+
+.home-wrapper .you-have-badge {
+  float: none;
+  display: inline-block;
+  position: relative;
+  right: 7px;
+}
+/*# sourceMappingURL=homewrapper.css.map */

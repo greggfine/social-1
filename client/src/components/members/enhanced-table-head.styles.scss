@@ -1,0 +1,11 @@
+.table-head-cell {
+  font-size: 1.4rem !important;
+  opacity: 0.9 !important;
+}
+
+@media screen and (max-width: 650px) {
+  .table-head-cell {
+    font-size: 0.95rem !important;
+    font-weight: 900 !important;
+  }
+}

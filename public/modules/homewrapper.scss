@@ -1,0 +1,40 @@
+.home-wrapper {
+  margin-top: 60px;
+
+  a {
+    position: relative;
+    left: -25px;
+    top: 15px;
+  }
+
+  .bottom-wrapper {
+    padding-top: 40px;
+  }
+
+  .current-number-of-tracks {
+    padding-top: 20px;
+    float: right;
+  }
+  .you-currently-have {
+    padding-top: 20px;
+    float: right;
+  }
+  .post-track-comment-wrapper {
+    display: flex;
+
+    i {
+      font-size: 3rem;
+    }
+
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  .you-have-badge {
+    float: none;
+    display: inline-block;
+    position: relative;
+    right: 7px;
+  }
+}

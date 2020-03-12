@@ -1,0 +1,150 @@
+.Home {
+  text-align: center;
+
+  .Home-heading {
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Futura", sans-serif;
+    letter-spacing: 1.8px;
+    font-weight: 400;
+    font-size: 3.2rem;
+  }
+
+  .Home-cards {
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: left;
+  }
+
+  .Home-post-card {
+    margin-bottom: 50px;
+  }
+
+  .Home-post-card-heading {
+    display: flex;
+    i {
+      font-size: 3rem;
+    }
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  .card-left {
+    width: 50%;
+    float: left;
+  }
+
+  .card-right {
+    float: left;
+    width: 50%;
+  }
+
+  .mix-feedback-card-wrapper {
+    display: flex;
+  }
+
+  .mix-feedback-card {
+    width: 100%;
+  }
+
+  span.badge {
+    float: none;
+  }
+  .card {
+    border-radius: 7px;
+  }
+  .Home-post-card-content {
+    padding-top: 20px;
+  }
+
+  .badge {
+    border-radius: 10%;
+  }
+
+  .Home-post-card-badge {
+    float: none;
+    display: inline-block;
+    position: relative;
+    right: 7px;
+  }
+
+  a {
+    position: relative;
+    left: -25px;
+    top: 15px;
+  }
+
+  .Home-banner {
+    box-shadow: 3px 10px 10px 10px grey;
+    margin: 100px auto;
+    width: 70%;
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Home {
+    margin-top: 60px;
+
+    .Home-heading {
+      margin: auto;
+      letter-spacing: 1px;
+      font-size: 3rem;
+      max-width: 300px;
+
+      .Home-heading-username {
+        max-width: 450px;
+      }
+    }
+
+    .Home-cards {
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: -80px;
+    }
+
+    .Home-banner {
+      margin-bottom: 30px;
+      min-height: 140px;
+      box-shadow: none;
+    }
+
+    .Home-post-card-content {
+      padding-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    .Home-post-card-heading {
+      i {
+        font-size: 2.2rem;
+      }
+      span {
+        font-size: 1.5rem;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Home {
+    .Home-post-card-content {
+      line-height: 2;
+    }
+
+    .card-left,
+    .card-right {
+      width: 100%;
+      float: none;
+      padding-left: 20px;
+    }
+
+    .card-right {
+      padding-top: 30px;
+    }
+  }
+}
