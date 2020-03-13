@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,oBADkB,CAClB,WAAW,CAAC;EACV,UAAU,EAAE,WAAW;EACvB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,IAAI;EAChB,YAAY,EAAE,IAAI;CAKnB;;AAXH,AAQI,oBARgB,CAClB,WAAW,AAOR,MAAM,CAAC;EACN,MAAM,EAAE,OAAO;CAChB",
+    "sources": [
+        "editdeletewrapper.scss"
+    ],
+    "names": [],
+    "file": "editdeletewrapper.css"
+}

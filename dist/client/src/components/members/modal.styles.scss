@@ -1,0 +1,18 @@
+.modal-card {
+  width: 90%;
+}
+
+#simple-modal-title {
+  justify-content: center;
+}
+
+#simple-modal-description span {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .modal-card {
+    font-size: 0.8rem;
+    padding-left: 0px !important;
+  }
+}

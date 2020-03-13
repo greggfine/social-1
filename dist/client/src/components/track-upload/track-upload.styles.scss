@@ -1,0 +1,109 @@
+.track-upload {
+  position: relative;
+  .track-upload-heading-text {
+    font-family: "Futura", sans-serif;
+    font-style: italic;
+    position: relative;
+    bottom: 10px;
+    color: #37474f;
+  }
+
+  .cloud-upload-icon {
+    margin-right: 60px;
+  }
+
+  .page-heading {
+    padding: 0;
+  }
+  .track-notes {
+    padding-top: 30px;
+    margin-top: 60px;
+
+    .track-notes-pencil-icon {
+      font-size: 2rem;
+      position: relative;
+    }
+
+    .add-notes-text {
+      font-size: 1.4rem;
+    }
+  }
+
+  .track-upload-file-field-wrapper {
+    margin-top: 140px;
+  }
+
+  .track-upload-notes-field {
+    border: 1px solid #000;
+  }
+
+  .track-upload-submit-btn-wrapper {
+    float: right;
+  }
+
+  .track-upload-heading-image {
+    width: 80px;
+  }
+
+  .track-upload-err-msg {
+    color: red;
+    max-width: 200px;
+    position: absolute;
+    left: 180px;
+    bottom: 400px;
+  }
+
+  .post-track-form {
+    margin-top: 100px;
+  }
+
+  .file-field-wrapper {
+    label {
+      font-size: 2rem;
+    }
+
+    .file-field-heading {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .file-field {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .track-upload {
+    .file-field-wrapper {
+      .file-field {
+        width: 100%;
+      }
+    }
+    .track-upload-heading-text {
+      font-size: 2.1rem;
+      padding-right: 10px;
+    }
+    .cloud-upload-icon {
+      margin-right: 20px;
+      font-size: 5rem;
+      padding-left: 40px;
+    }
+    .file-field-wrapper {
+      .file-field {
+        margin-top: 0px;
+      }
+    }
+
+    .page-heading {
+      margin-top: 50px;
+      margin-bottom: -90px;
+    }
+
+    .track-upload-err-msg {
+      position: absolute;
+      left: 10px;
+      bottom: 500px;
+    }
+  }
+}

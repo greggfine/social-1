@@ -1,0 +1,207 @@
+.Settings {
+  .Settings-fields {
+    display: grid;
+    grid-column-gap: 2%;
+    grid-row-gap: 4%;
+    grid-template-columns: 33% 33% 33%;
+
+    grid-template-areas:
+      " memberName   location ."
+      "email     phone website"
+      "instrument1 instrument2 instrument3 "
+      "genre1 genre2 genre3 "
+      "socialMedia1 socialMedia2 socialMedia3";
+  }
+  .Settings-heading {
+    box-shadow: 5px 5px 5px 5px grey;
+    margin: 80px 0px 75px 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    .Settings-gear-icon {
+      margin-right: 20px;
+    }
+
+    .Settings-heading-text {
+      font-family: "Futura", sans-serif;
+      font-size: 2.5rem;
+      font-style: italic;
+      position: relative;
+      bottom: 10px;
+      color: #37474f;
+    }
+  }
+
+  .Settings-user-image {
+    margin-bottom: 30px;
+
+    .Settings-user-image-text {
+      margin-right: 40px;
+      color: #635a5a;
+    }
+
+    .Settings-user-image-upload-btn {
+      background-color: #3949ab !important;
+      width: 280px;
+      border-radius: 5px;
+      input {
+        color: #fff;
+      }
+    }
+  }
+
+  .Settings-image-upload-err-msg,
+  .Settings-duplicate-member-name-err-msg {
+    color: red;
+    i {
+      vertical-align: top;
+      padding-right: 5px;
+    }
+  }
+
+  .Settings-duplicate-member-name-err-msg:hover {
+    cursor: pointer;
+  }
+
+  .Settings-submit-btn {
+    margin-top: 70px;
+    float: right;
+    position: relative;
+    left: 3%;
+  }
+}
+
+.email {
+  grid-area: email;
+}
+.phone {
+  grid-area: phone;
+}
+.genre1 {
+  grid-area: genre1;
+}
+.genre2 {
+  grid-area: genre2;
+}
+.genre3 {
+  grid-area: genre3;
+}
+
+input {
+  color: #494a4c;
+}
+
+label {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #635a5a;
+}
+
+.instrument1 label,
+.instrument2 label,
+.instrument3 label {
+  color: #5f5f5f;
+}
+
+.genre1 label,
+.genre2 label,
+.genre3 label {
+  color: #5f5f5f;
+}
+
+.socialMedia1 label,
+.socialMedia2 label,
+.socialMedia3 label {
+  color: #5f5f5f;
+}
+
+.instrument1 {
+  grid-area: instrument1;
+}
+.instrument2 {
+  grid-area: instrument2;
+}
+.instrument3 {
+  grid-area: instrument3;
+}
+.location {
+  grid-area: location;
+}
+.memberName {
+  grid-area: memberName;
+}
+.website {
+  grid-area: website;
+}
+.socialMedia1 {
+  grid-area: socialMedia1;
+}
+.socialMedia2 {
+  grid-area: socialMedia2;
+}
+.socialMedia3 {
+  grid-area: socialMedia3;
+}
+
+@media screen and (max-width: 1000px) {
+  .Settings {
+    .Settings-fields {
+      font-size: 0.2rem;
+      grid-row-gap: 0%;
+      grid-template-columns: 5% 85%;
+      grid-template-areas:
+        ". memberName"
+        ". location"
+        ". email"
+        ". phone"
+        ". website"
+        ". instrument1   "
+        ". instrument2  "
+        ". instrument3 "
+        ". genre1"
+        ". genre2"
+        ". genre3"
+        ". socialMedia1"
+        ". socialMedia2"
+        ". socialMedia3";
+
+      input {
+        font-size: 0.9rem;
+      }
+    }
+
+    .Settings-heading {
+      margin: 20px 0px 45px 0;
+    }
+
+    .Settings-user-image {
+      width: 90%;
+      padding-left: 7%;
+
+      .Settings-user-image-upload-btn {
+        margin-top: 5px;
+      }
+    }
+
+    .image-guide {
+      margin-top: -10px;
+      margin-bottom: 0;
+    }
+
+    .Settings-submit-btn {
+      margin-top: 10px;
+      margin-bottom: 40px;
+      left: -8%;
+    }
+
+    .Settings-image-upload-err-msg {
+      margin-bottom: 0;
+    }
+
+    .Settings-duplicate-member-name-err-msg {
+      margin-left: 30px;
+    }
+  }
+}

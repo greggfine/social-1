@@ -1,0 +1,151 @@
+.body-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.login-form {
+  max-width: 400px;
+}
+
+.register-wrapper {
+  margin-top: 60px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.music-icon {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+.fire-image {
+  margin-top: 240px;
+}
+
+.post-track-form {
+  padding-top: 60px;
+}
+
+.show-list-wrapper {
+  padding-top: 60px;
+}
+
+.show-list-wrapper .comment-list {
+  padding-top: 60px;
+  position: relative;
+  left: 10px;
+}
+
+.show-list-wrapper .comment-list li button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.show-list-wrapper .comment-submit-btn {
+  font-size: 0.8rem;
+  padding-left: 14px;
+  padding-right: 14px;
+  top: -10px;
+  left: 10px;
+}
+
+.show-list-wrapper .manage-options {
+  margin-left: 20px;
+}
+
+.show-list-wrapper .submit-comment-form {
+  padding-top: 60px;
+}
+
+.flash {
+  margin-top: 20px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+.success-flash {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.success-deleted-flash,
+.success-username-flash {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.error-flash {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.page-not-found-wrapper {
+  margin-top: 60px;
+}
+
+.page-not-found-wrapper .button-wrapper {
+  margin-top: 40px;
+}
+
+.page-not-found-wrapper h1 {
+  max-width: 600px;
+  font-weight: 800;
+}
+
+.page-not-found-wrapper h5 {
+  margin-top: 40px;
+  font-weight: 500;
+  max-width: 305px;
+}
+
+.page-not-found-wrapper .see-all-tracks-btn {
+  margin-left: 20px;
+}
+
+.page {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 300ms linear 0ms;
+  transition: opacity 300ms linear 0ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  -webkit-transition: opacity 0ms linear;
+  transition: opacity 0ms linear;
+}
+/*# sourceMappingURL=App.styles.css.map */

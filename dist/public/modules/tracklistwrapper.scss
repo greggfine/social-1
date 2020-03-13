@@ -1,0 +1,28 @@
+.track-list-wrapper {
+  margin-top: 40px;
+
+  .audio-manage-wrapper {
+    display: flex;
+  }
+
+  .track-upload-date {
+    position: relative;
+    left: 25px;
+    opacity: 0.6;
+  }
+
+  .comment {
+    margin-left: 127px;
+  }
+
+  .manage-options {
+    margin-left: 20px;
+    position: relative;
+    top: 15px;
+  }
+
+  //   This gives a Green Border to the first track if it's the current Logged In User's track
+  .tracks-collection-wrapper:first-child {
+    border: 5px solid lightgreen;
+  }
+}

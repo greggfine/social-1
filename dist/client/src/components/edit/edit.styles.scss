@@ -1,0 +1,103 @@
+.edit-delete {
+  .edit-track-notes {
+    margin: 180px auto;
+  }
+
+  .edit-delete-heading {
+    margin-top: 80px;
+    margin-bottom: 90px;
+    border: 1px solid #000;
+    justify-content: flex-start;
+  }
+
+  .edit-list-heading {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #5f5e5e;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 0.7;
+  }
+  .edit-track-heading {
+    font-family: "Futura", sans-serif;
+    font-style: italic;
+    position: relative;
+    bottom: 10px;
+    color: #37474f;
+  }
+  .edit-btns-wrapper {
+    margin-top: 180px !important;
+    border-radius: 20px;
+    padding: 10px 40px;
+    align-items: center;
+    margin: auto;
+  }
+
+  .escape-or-delete-wrapper {
+    transform: translateY(-10px);
+    .escape-message {
+      font-size: 0.9rem;
+      font-style: normal;
+      position: relative;
+      top: 5px;
+      color: blue;
+    }
+  }
+
+  .delete-img {
+    width: 35px !important;
+    height: 10% !important;
+  }
+
+  .delete-track-wrapper {
+    font-family: "Futura", sans-serif;
+    font-style: italic;
+    margin-top: 70px;
+    padding: 10px;
+    display: flex;
+    border: 3px solid rgba(255, 0, 0, 0.2);
+  }
+
+  .edit-submit-btn-wrapper {
+    float: right;
+  }
+
+  .delete-track-message {
+    font-family: "Arial", sans-serif;
+    font-size: 1.2rem;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .delete-track-icon {
+    font-size: 3.5rem;
+    margin-top: 10px;
+    display: block;
+    opacity: 0.9;
+    transition: 200ms ease-in;
+    padding-right: 20px;
+
+    &:hover {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  .edit-heading {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .edit-delete {
+    .edit-list-heading {
+      font-size: 1.1rem;
+    }
+
+    .delete-track-icon {
+      font-size: 3.2rem;
+    }
+  }
+}

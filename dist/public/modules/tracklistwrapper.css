@@ -1,0 +1,30 @@
+.track-list-wrapper {
+  margin-top: 40px;
+}
+
+.track-list-wrapper .audio-manage-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.track-list-wrapper .track-upload-date {
+  position: relative;
+  left: 25px;
+  opacity: 0.6;
+}
+
+.track-list-wrapper .comment {
+  margin-left: 127px;
+}
+
+.track-list-wrapper .manage-options {
+  margin-left: 20px;
+  position: relative;
+  top: 15px;
+}
+
+.track-list-wrapper .tracks-collection-wrapper:first-child {
+  border: 5px solid lightgreen;
+}
+/*# sourceMappingURL=tracklistwrapper.css.map */

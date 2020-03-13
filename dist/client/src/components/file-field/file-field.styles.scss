@@ -1,0 +1,23 @@
+.file-field-wrapper {
+  label {
+    font-size: 2rem;
+  }
+
+  .file-field-heading {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .file-field {
+    margin-top: 40px;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .file-field-wrapper {
+    .file-field {
+      width: 100%;
+    }
+  }
+}

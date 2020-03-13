@@ -1,0 +1,44 @@
+.footer-wrapper {
+  .copyright-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .facebook-icon {
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .fcc-footer-logo {
+    position: relative;
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-wrapper {
+    .copyright-text {
+      padding-bottom: 0px;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .facebook-icon {
+      top: -40px;
+      left: 200px;
+      margin-bottom: -60px;
+    }
+    .fcc-footer-logo {
+      position: relative;
+      left: 40px;
+      margin-bottom: -25px;
+    }
+    .fcc-logo-social-icons-wrapper {
+      height: 140px;
+    }
+  }
+}
