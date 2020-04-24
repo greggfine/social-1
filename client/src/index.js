@@ -15,7 +15,7 @@ ReactDOM.render(
   <Router>
     <Security
       issuer={config.issuer}
-      clientId={config.client_id}
+      clientId={process.env.REACT_APP_OKTA_CLIENT_ID}
       redirectUri={config.redirect_uri}
       onAuthRequired={onAuthRequired}
       pkce={true}
