@@ -24,8 +24,8 @@ export default withAuth(
     }
     async componentDidMount() {
       M.AutoInit()
-      socket = io("http://localhost:3001")
-      //   socket = io("https://rocky-sea-24378.herokuapp.com/")
+      //   socket = io("http://localhost:3001")
+      socket = io("https://salty-bayou-12671.herokuapp.com/")
       const { id } = this.props.match.params
       const tracks = await fetch("/api/tracks", {
         method: "GET",

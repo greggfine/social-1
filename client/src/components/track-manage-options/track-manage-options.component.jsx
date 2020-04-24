@@ -9,8 +9,8 @@ let socket
 const TrackManageOptions = ({ track }) => {
   useEffect(() => {
     M.AutoInit()
-    socket = io("http://localhost:3001")
-    // socket = io("https://rocky-sea-24378.herokuapp.com/")
+    // socket = io("http://localhost:3001")
+    socket = io("https://salty-bayou-12671.herokuapp.com/")
   }, [])
 
   return (
