@@ -7,8 +7,6 @@ import config from "./app.config"
 import * as serviceWorker from "./serviceWorker"
 import { BrowserRouter as Router } from "react-router-dom"
 
-// When someone tries to access a route and they're not logged in,
-// redirect them to "/"
 function onAuthRequired({ history }) {
   history.push("/")
 }

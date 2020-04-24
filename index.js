@@ -14,11 +14,6 @@ const express = require("express"),
   cors = require("cors"),
   OktaJwtVerifier = require("@okta/jwt-verifier");
 
-// const oktaJwtVerifier = new OktaJwtVerifier({
-//   clientId: process.env.REACT_APP_OKTA_CLIENT_ID,
-//   issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
-// });
-
 const PORT = process.env.PORT || 3001;
 
 const server = http.createServer(app);
@@ -101,28 +96,12 @@ io.on("connect", socket => {
   });
 });
 
-// SHOULD THIS BE RE-ORDERED????
-// app.use(async (req, res, next) => {
-//   try {
-//     if (!req.headers.authorization)
-//       throw new Error("Authorization header is required");
-
-//     const accessToken = req.headers.authorization.trim().split(" ")[1];
-//     await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
-//     next();
-//   } catch (error) {
-//     next(error.message);
-//   }
-// });
-
 app.use("/api/tracks", tracksRouter);
 app.use("/api/comments", commentsRouter);
 app.use("/api/members", membersRouter);
 
 if (process.env.NODE_ENV === "production") {
-  // If we're in PRODUCTION, EXPRESS should serve up PRODUCTION ASSETS(like main.js or main.css)
   app.use(express.static("client/build"));
-  //  EXPRESS should serve up index.html file if it doesn't recognize the route
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });

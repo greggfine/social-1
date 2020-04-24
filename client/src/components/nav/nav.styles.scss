@@ -7,7 +7,8 @@ img {
     margin-bottom: -3px;
   }
   .nav-brand-logo {
-    transform: translateY(15%);
+    transform: translateY(17%);
+    border-radius: 50%;
   }
 
   .active-link {
@@ -27,5 +28,13 @@ img {
 
   .logout-link {
     padding-left: 100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-wrapper {
+    .nav-brand-logo {
+      transform: translateY(5px);
+    }
   }
 }

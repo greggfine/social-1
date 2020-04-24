@@ -8,11 +8,7 @@ const Nav = ({ logout }) => (
       <div className="nav-wrapper indigo darken-1 z-depth-2">
         <div className="container">
           <NavLink to="/" className="brand-logo">
-            <img
-              className="nav-brand-logo"
-              src="/images/fcc_logo.jpg"
-              alt="freelance composers banner"
-            />
+            <img className="nav-brand-logo" src="/images/music-notes_logo.png" alt="logo" />
           </NavLink>
           <NavLink to="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>

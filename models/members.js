@@ -20,13 +20,4 @@ const MemberSchema = new mongoose.Schema({
 });
 
 const Members = mongoose.model("Members", MemberSchema);
-// Members.create({
-//   memberName: "gregg fine",
-//   instrument: "guitar",
-//   genre: "blues",
-//   location: "miami"
-// });
-
-// Members.deleteOne({ memberName: "a" }).then(result => console.log(result));
-
 module.exports = mongoose.model("Members", MemberSchema);

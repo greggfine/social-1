@@ -24,8 +24,8 @@ class OktaSignInWidget extends Component {
     return (
       <div>
         <img
-          src="images/login-banner_optim.jpg"
-          alt="freelance composers banner"
+          src="images/audio-e-guitars-guitars-music-6966 copy.jpg"
+          alt="musical instruments banner"
           className="responsive-img fcc-banner"
         />
       </div>

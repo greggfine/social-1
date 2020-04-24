@@ -157,8 +157,8 @@ export default withAuth(
             </div>
           </div>
           <img
-            src="images/fcc_banner4_resize_optim.jpg"
-            alt="freelance composers banner"
+            src="images/audio-e-guitars-guitars-music-6966.jpg"
+            alt="musical instruments"
             className="responsive-img container Home-banner"
           />
         </main>

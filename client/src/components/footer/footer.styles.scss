@@ -5,18 +5,20 @@
     padding-left: 20px;
     padding-bottom: 20px;
   }
-  .facebook-icon {
+  .social-icon {
     border-radius: 50%;
-    position: relative;
-    top: 20px;
-
+    display: block;
     &:hover {
       transform: scale(1.2);
     }
   }
-  .fcc-footer-logo {
-    position: relative;
-    top: 30px;
+  .footer-logo {
+    margin-right: 80px;
+  }
+  .fcc-logo-social-icons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -27,16 +29,16 @@
       font-size: 0.8rem;
       text-align: center;
     }
-    .facebook-icon {
-      top: -40px;
-      left: 200px;
-      margin-bottom: -60px;
-    }
-    .fcc-footer-logo {
-      position: relative;
-      left: 40px;
-      margin-bottom: -25px;
-    }
+    // .social-icon {
+    //   top: -40px;
+    //   left: 200px;
+    //   margin-bottom: -60px;
+    // }
+    // .fcc-footer-logo {
+    //   position: relative;
+    //   left: 40px;
+    //   margin-bottom: -25px;
+    // }
     .fcc-logo-social-icons-wrapper {
       height: 140px;
     }
