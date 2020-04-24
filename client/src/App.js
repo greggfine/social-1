@@ -35,7 +35,6 @@ export default withAuth(
                 <Route exact path="/implicit/callback" component={ImplicitCallback} />
               </Switch>
               {location.pathname !== "/" && <Nav logout={this.logout} />}
-
               <Switch>
                 <SecureRoute path="/account" exact component={Account} />
                 <SecureRoute path="/home" exact component={Home} />
