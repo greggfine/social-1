@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "cd client/ && npm install && npm run build",
     "server": "env-cmd ./config/dev.env nodemon index.js",
     "client": "env-cmd ./config/dev.env npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
