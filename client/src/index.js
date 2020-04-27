@@ -7,7 +7,7 @@ import config from "./app.config"
 import * as serviceWorker from "./serviceWorker"
 import { BrowserRouter as Router } from "react-router-dom"
 
-const myIssuer = `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
+const myIssuer = `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default!`
 
 function onAuthRequired({ history }) {
   history.push("/")
