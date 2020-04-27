@@ -15,7 +15,8 @@ ReactDOM.render(
   <Router>
     <Security
       //   issuer={config.issuer}
-      issuer="https://dev-885516.okta.com/oauth2/default"
+      //   issuer="https://dev-885516.okta.com/oauth2/default"
+      issuer={`${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`}
       clientId={config.client_id}
       redirectUri={config.redirect_uri}
       onAuthRequired={onAuthRequired}
