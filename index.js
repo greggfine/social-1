@@ -25,7 +25,7 @@ app.use(cors());
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname + "/public")));
+app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
@@ -96,9 +96,9 @@ io.on("connect", socket => {
   });
 });
 
-app.use("/api/tracks", tracksRouter);
-app.use("/api/comments", commentsRouter);
-app.use("/api/members", membersRouter);
+// app.use("/api/tracks", tracksRouter);
+// app.use("/api/comments", commentsRouter);
+// app.use("/api/members", membersRouter);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
