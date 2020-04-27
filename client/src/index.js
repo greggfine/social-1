@@ -7,6 +7,8 @@ import config from "./app.config"
 import * as serviceWorker from "./serviceWorker"
 import { BrowserRouter as Router } from "react-router-dom"
 
+const myIssuer = `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
+
 function onAuthRequired({ history }) {
   history.push("/")
 }
@@ -16,7 +18,7 @@ ReactDOM.render(
     <Security
       //   issuer={config.issuer}
       //   issuer="https://dev-885516.okta.com/oauth2/default"
-      issuer={`${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`}
+      issuer={myIssuer}
       clientId={config.client_id}
       redirectUri={config.redirect_uri}
       onAuthRequired={onAuthRequired}
