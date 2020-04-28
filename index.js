@@ -17,8 +17,7 @@ const express = require("express"),
 
 const oktaJwtVerifier = new OktaJwtVerifier({
   clientId: process.env.REACT_APP_OKTA_CLIENT_ID,
-  //   issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
-  issuer: "https://dev-885516.okta.com/oauth2/default"
+  issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
 });
 
 const PORT = process.env.PORT || 3001;
@@ -27,13 +26,7 @@ const server = http.createServer(app);
 const io = socket(server);
 server.listen(PORT, () => console.log(`App is running on Port ${PORT}`));
 
-var corsOptions = {
-  origin: "https://salty-bayou-12671.herokuapp.com/",
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
 app.use(helmet());
-app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -41,6 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
+app.use(cors());
 
 io.on("connect", socket => {
   socket.on(
