@@ -16,7 +16,8 @@ const express = require("express"),
 
 const oktaJwtVerifier = new OktaJwtVerifier({
   clientId: process.env.REACT_APP_OKTA_CLIENT_ID,
-  issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
+  //   issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
+  issuer: "https://dev-885516.okta.com/oauth2/default"
 });
 
 const PORT = process.env.PORT || 3001;
@@ -33,20 +34,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
-
-app.use(async (req, res, next) => {
-  try {
-    if (!req.headers.authorization) {
-      throw new Error("Authorization header is required");
-    }
-
-    const accessToken = req.headers.authorization.trim().split(" ")[1];
-    await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
-    next();
-  } catch (error) {
-    next(error.message);
-  }
-});
 
 io.on("connect", socket => {
   socket.on(
@@ -113,6 +100,20 @@ io.on("connect", socket => {
   socket.on("updateTrackCount", () => {
     io.emit("updateCurrNumTracks");
   });
+});
+
+app.use(async (req, res, next) => {
+  try {
+    if (!req.headers.authorization) {
+      throw new Error("Authorization header is required");
+    }
+
+    const accessToken = req.headers.authorization.trim().split(" ")[1];
+    await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
+    next();
+  } catch (error) {
+    next(error.message);
+  }
 });
 
 app.use("/api/tracks", tracksRouter);
