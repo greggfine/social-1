@@ -34,6 +34,20 @@ app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
+app.use(async (req, res, next) => {
+  try {
+    if (!req.headers.authorization) {
+      throw new Error("Authorization header is required");
+    }
+
+    const accessToken = req.headers.authorization.trim().split(" ")[1];
+    await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
+    next();
+  } catch (error) {
+    next(error.message);
+  }
+});
+
 io.on("connect", socket => {
   socket.on(
     "postComment",
@@ -104,20 +118,6 @@ io.on("connect", socket => {
 app.use("/api/tracks", tracksRouter);
 app.use("/api/comments", commentsRouter);
 app.use("/api/members", membersRouter);
-
-app.use(async (req, res, next) => {
-  try {
-    if (!req.headers.authorization) {
-      throw new Error("Authorization header is required");
-    }
-
-    const accessToken = req.headers.authorization.trim().split(" ")[1];
-    await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
-    next();
-  } catch (error) {
-    next(error.message);
-  }
-});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
