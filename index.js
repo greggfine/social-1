@@ -106,7 +106,8 @@ io.on("connect", socket => {
 app.use(async (req, res, next) => {
   try {
     if (!req.headers.authorization) {
-      throw new Error("Authorization header is required");
+      //   throw new Error("Authorization header is required");
+      next();
     }
 
     const accessToken = req.headers.authorization.trim().split(" ")[1];
