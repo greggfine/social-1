@@ -8,7 +8,8 @@ class OktaSignInWidget extends Component {
   componentDidMount() {
     const el = ReactDOM.findDOMNode(this)
     this.widget = new OktaSignIn({
-      baseUrl: this.props.baseUrl,
+      //   baseUrl: this.props.baseUrl,
+      baseUrl: "https://dev-885516.okta.com",
       authParams: {
         pkce: true
       }
