@@ -26,7 +26,7 @@ export default withAuth(
         <Route
           render={({ location }) => (
             <div>
-              <Switch location={location}>
+              {/* <Switch location={location}>
                 <Route
                   path="/"
                   exact
@@ -35,15 +35,15 @@ export default withAuth(
                 <Route exact path="/implicit/callback" component={ImplicitCallback} />
               </Switch>
               {location.pathname !== "/" && <Nav logout={this.logout} />}
-              <Switch>
-                <SecureRoute path="/account" exact component={Account} />
-                <SecureRoute path="/home" exact component={Home} />
-                <SecureRoute path="/members" exact component={Members} />
-                <SecureRoute path="/tracks" exact component={Tracks} />
-                <SecureRoute path="/tracks/new" exact component={TrackUpload} />
-                <SecureRoute path="/tracks/:id/edit" exact component={Edit} />
-                <SecureRoute path="/track/:id" exact component={Show} />
-              </Switch>
+              <Switch> */}
+              <SecureRoute path="/account" exact component={Account} />
+              <SecureRoute path="/home" exact component={Home} />
+              <SecureRoute path="/members" exact component={Members} />
+              <SecureRoute path="/tracks" exact component={Tracks} />
+              <SecureRoute path="/tracks/new" exact component={TrackUpload} />
+              <SecureRoute path="/tracks/:id/edit" exact component={Edit} />
+              <SecureRoute path="/track/:id" exact component={Show} />
+              {/* </Switch> */}
             </div>
           )}
         />

@@ -27,6 +27,7 @@ const io = socket(server);
 server.listen(PORT, () => console.log(`App is running on Port ${PORT}`));
 
 app.use(helmet());
+app.use(cors());
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -34,7 +35,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
-app.use(cors());
 
 io.on("connect", socket => {
   socket.on(
