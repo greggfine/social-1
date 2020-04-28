@@ -41,7 +41,10 @@ export default withAuth(
     }
 
     render() {
-      if (this.state.authenticated === null) return null
+      //   if (this.state.authenticated === null) return null
+      if (this.state.authenticated === null) {
+        window.alert("hi gregg")
+      }
       return this.state.authenticated ? (
         <Redirect to={{ pathname: "/home" }} />
       ) : (
