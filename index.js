@@ -101,6 +101,10 @@ io.on("connect", socket => {
   });
 });
 
+app.use("/api/tracks", tracksRouter);
+app.use("/api/comments", commentsRouter);
+app.use("/api/members", membersRouter);
+
 app.use(async (req, res, next) => {
   try {
     if (!req.headers.authorization) {
@@ -114,10 +118,6 @@ app.use(async (req, res, next) => {
     next(error.message);
   }
 });
-
-app.use("/api/tracks", tracksRouter);
-app.use("/api/comments", commentsRouter);
-app.use("/api/members", membersRouter);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
