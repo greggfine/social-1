@@ -43,8 +43,7 @@ export default withAuth(
     render() {
       if (this.state.authenticated === null) return null
       return this.state.authenticated ? (
-        // <Redirect to={{ pathname: "/home" }} />
-        <Redirect to={{ pathname: "/" }} />
+        console.log("yay") || <Redirect to={{ pathname: "/home" }} />
       ) : (
         <OktaSignInWidget
           baseUrl={this.props.baseUrl}
