@@ -1,5 +1,6 @@
 const express = require("express"),
   app = express(),
+  bodyParser = require("body-parser"),
   path = require("path"),
   helmet = require("helmet"),
   objID = require("./dbConnect").objectID,
@@ -16,8 +17,7 @@ const express = require("express"),
 
 const oktaJwtVerifier = new OktaJwtVerifier({
   clientId: process.env.REACT_APP_OKTA_CLIENT_ID,
-  //   issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
-  issuer: "https://dev-885516.okta.com/oauth2/default"
+  issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
 });
 
 const PORT = process.env.PORT || 3001;
@@ -28,6 +28,7 @@ server.listen(PORT, () => console.log(`App is running on Port ${PORT}`));
 
 app.use(helmet());
 app.use(cors());
+app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
