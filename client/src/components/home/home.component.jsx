@@ -36,7 +36,6 @@ export default withAuth(
     }
 
     async componentDidMount() {
-      console.log("in here")
       M.AutoInit()
       //   socket = io("http://localhost:3001")
       socket = io("https://salty-bayou-12671.herokuapp.com/")
