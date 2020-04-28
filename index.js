@@ -26,8 +26,13 @@ const server = http.createServer(app);
 const io = socket(server);
 server.listen(PORT, () => console.log(`App is running on Port ${PORT}`));
 
+var corsOptions = {
+  origin: "https://salty-bayou-12671.herokuapp.com/",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 app.use(helmet());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.use(express.json());
