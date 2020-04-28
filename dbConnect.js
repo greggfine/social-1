@@ -5,7 +5,7 @@ module.exports = {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: false
   }),
   objectID: mongoose.Types
 };
