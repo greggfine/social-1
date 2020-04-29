@@ -23,40 +23,14 @@ export default withAuth(
 
     render() {
       return (
-        // <Route
-        //   render={({ location }) => (
-        //     <div>
-        //       <Switch location={location}>
-        <Route path="/" exact render={() => <Login baseUrl="https://dev-885516.okta.com" />} />
-        //         <Route exact path="/implicit/callback" component={ImplicitCallback} />
-        //       </Switch>
-        //       {location.pathname !== "/" && <Nav logout={this.logout} />}
-        //       <Switch>
-        //         <SecureRoute path="/account" exact component={Account} />
-        //         <SecureRoute path="/home" exact component={Home} />
-        //         <SecureRoute path="/members" exact component={Members} />
-        //         <SecureRoute path="/tracks" exact component={Tracks} />
-        //         <SecureRoute path="/tracks/new" exact component={TrackUpload} />
-        //         <SecureRoute path="/tracks/:id/edit" exact component={Edit} />
-        //         <SecureRoute path="/track/:id" exact component={Show} />
-        //       </Switch>
-        //     </div>
-        //   )}
-        // />
-      )
-    }
-  }
-)
-
-/* 
-WORKING CODE:
-
+        <Route
+          render={({ location }) => (
             <div>
               <Switch location={location}>
                 <Route
                   path="/"
                   exact
-                  render={() => <Login baseUrl="https://dev-885516.okta.com" />}
+                  render={() => <Login baseUrl="https://dev-885516!.okta.com" />}
                 />
                 <Route exact path="/implicit/callback" component={ImplicitCallback} />
               </Switch>
@@ -71,5 +45,9 @@ WORKING CODE:
                 <SecureRoute path="/track/:id" exact component={Show} />
               </Switch>
             </div>
-
-*/
+          )}
+        />
+      )
+    }
+  }
+)
