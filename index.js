@@ -104,32 +104,32 @@ io.on("connect", socket => {
 });
 
 /* ADDED THESE 4 LINES to EXPERIMENT */
-app.use(express.static("client/build"));
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
-
-// app.use(async (req, res, next) => {
-//   try {
-//     if (!req.headers.authorization) {
-//       throw new Error("Authorization header is required");
-//     }
-
-//     const accessToken = req.headers.authorization.trim().split(" ")[1];
-//     await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
-//     next();
-//   } catch (error) {
-//     next(error.message);
-//   }
+// app.use(express.static("client/build"));
+// app.get("/", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 // });
 
-// app.use("/api/tracks", tracksRouter);
-// app.use("/api/comments", commentsRouter);
-// app.use("/api/members", membersRouter);
+app.use(async (req, res, next) => {
+  try {
+    if (!req.headers.authorization) {
+      throw new Error("Authorization header is required");
+    }
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//   });
-// }
+    const accessToken = req.headers.authorization.trim().split(" ")[1];
+    await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
+    next();
+  } catch (error) {
+    next(error.message);
+  }
+});
+
+app.use("/api/tracks", tracksRouter);
+app.use("/api/comments", commentsRouter);
+app.use("/api/members", membersRouter);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
