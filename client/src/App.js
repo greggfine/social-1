@@ -30,7 +30,7 @@ export default withAuth(
                 <Route
                   path="/"
                   exact
-                  render={() => <Login baseUrl="https://dev-885516!.okta.com" />}
+                  render={() => <Login baseUrl="https://dev-885516.okta.com" />}
                 />
                 <Route exact path="/implicit/callback" component={ImplicitCallback} />
               </Switch>
