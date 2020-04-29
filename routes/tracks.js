@@ -25,6 +25,20 @@ const multerUpload = multer({
   storage: audioStorage
 }).single("fileName");
 
+router.use(async (req, res, next) => {
+  try {
+    if (!req.headers.authorization) {
+      throw new Error("Authorization header is required");
+    }
+
+    const accessToken = req.headers.authorization.trim().split(" ")[1];
+    await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
+    next();
+  } catch (error) {
+    next(error.message);
+  }
+});
+
 // *******  INDEX ******** //
 router.get("/", async (req, res) => {
   try {
