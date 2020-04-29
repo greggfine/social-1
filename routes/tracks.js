@@ -9,13 +9,6 @@ const oktaJwtVerifier = new OktaJwtVerifier({
   issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`
 });
 
-// const clientId = process.env.REACT_APP_OKTA_CLIENT_ID;
-// const oktaDomain = `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`;
-// const oktaJwtVerifier = new OktaJwtVerifier({
-//   issuer: `${oktaDomain}/oauth2/default`,
-//   clientId: clientId
-// });
-
 const multer = require("multer");
 const uuid = require("uuid");
 
@@ -38,20 +31,6 @@ const multerUpload = multer({
   storage: audioStorage
 }).single("fileName");
 
-// function verifyToken(req, res, next) {
-//   const bearerHeader = req.headers["authorization"];
-
-//   if (bearerHeader) {
-//     const bearer = bearerHeader.split(" ");
-//     const bearerToken = bearer[1];
-//     req.token = bearerToken;
-//     next();
-//   } else {
-//     // Forbidden
-//     res.sendStatus(403);
-//   }
-// }
-
 router.use(async (req, res, next) => {
   try {
     if (!req.headers.authorization) {
@@ -62,7 +41,8 @@ router.use(async (req, res, next) => {
     await oktaJwtVerifier.verifyAccessToken(accessToken, "api://default");
     next();
   } catch (error) {
-    next(error.message);
+    // next(error.message);
+    res.redirect("/");
   }
 });
 
