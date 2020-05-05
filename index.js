@@ -1,6 +1,7 @@
 const express = require("express"),
   app = express(),
   bodyParser = require("body-parser"),
+  newRelic = require("newrelic"),
   path = require("path"),
   helmet = require("helmet"),
   objID = require("./dbConnect").objectID,
