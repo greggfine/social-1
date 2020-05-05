@@ -1,7 +1,10 @@
+const DYNO_URL = "https://salty-bayou-12671.herokuapp.com/";
+
 const express = require("express"),
   app = express(),
   bodyParser = require("body-parser"),
   newRelic = require("newrelic"),
+  wakeUpDyno = require("./wakeUpDyno.js"),
   path = require("path"),
   helmet = require("helmet"),
   objID = require("./dbConnect").objectID,
@@ -25,7 +28,10 @@ const PORT = process.env.PORT || 3001;
 
 const server = http.createServer(app);
 const io = socket(server);
-server.listen(PORT, () => console.log(`App is running on Port ${PORT}`));
+server.listen(PORT, () => {
+  wakeUpDyno(DYNO_URL);
+  console.log(`App is running on Port ${PORT}`);
+});
 
 app.use(helmet());
 app.use(cors());
