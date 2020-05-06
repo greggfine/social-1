@@ -11,6 +11,12 @@ class OktaSignInWidget extends Component {
       baseUrl: this.props.baseUrl,
       authParams: {
         pkce: true
+      },
+      username: "guest@greggfinedev.com",
+      i18n: {
+        en: {
+          "primaryauth.password.placeholder": `Password(for demo) : Visitor123`
+        }
       }
     })
     this.widget.renderEl({ el }, this.props.onSuccess, this.props.onError)
